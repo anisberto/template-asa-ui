@@ -17,6 +17,7 @@ import { GraficoComponent } from './components/grafico/grafico.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { SacComponent } from './paginas/sac/sac.component';
 import { UltimosLancamentosComponent } from './paginas/ultimos-lancamentos/ultimos-lancamentos.component';
+import { MapaComponent } from './components/mapa/mapa.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UltimosLancamentosComponent } from './paginas/ultimos-lancamentos/ultim
     GraficoComponent,
     ModalComponent,
     SacComponent,
-    UltimosLancamentosComponent
+    UltimosLancamentosComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,

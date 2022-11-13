@@ -7,6 +7,7 @@ import { CatalogoDeProdutosComponent } from './paginas/catalogo-de-produtos/cata
 import { AEmpresaComponent } from './paginas/a-empresa/a-empresa.component';
 import { UltimosLancamentosComponent } from './paginas/ultimos-lancamentos/ultimos-lancamentos.component';
 import { SacComponent } from './paginas/sac/sac.component';
+import { MapaComponent } from './components/mapa/mapa.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch:'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'catalogo-de-produtos', component: CatalogoDeProdutosComponent},
   {path:'a-empresa', component: AEmpresaComponent},
   {path:'ultimos-lancamentos', component: UltimosLancamentosComponent},
-  {path:'sac', component: ContatoComponent}
+  {path:'sac', component: ContatoComponent},
+  {path:'mapa', component: MapaComponent}
 ];
 
 @NgModule({
