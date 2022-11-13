@@ -3,3 +3,7 @@
   background-color: white !important;
   border-color: white !important;
 }
+
+#mapa {
+  background-image: url('../../../assets/img/mapa.svg');
+}

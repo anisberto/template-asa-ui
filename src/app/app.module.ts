@@ -15,6 +15,8 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { TabelaComponent } from './components/tabela/tabela.component';
 import { GraficoComponent } from './components/grafico/grafico.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { SacComponent } from './paginas/sac/sac.component';
+import { UltimosLancamentosComponent } from './paginas/ultimos-lancamentos/ultimos-lancamentos.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ModalComponent } from './components/modal/modal.component';
     FormularioComponent,
     TabelaComponent,
     GraficoComponent,
-    ModalComponent
+    ModalComponent,
+    SacComponent,
+    UltimosLancamentosComponent
   ],
   imports: [
     BrowserModule,
