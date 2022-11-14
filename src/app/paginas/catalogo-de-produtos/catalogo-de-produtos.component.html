@@ -1,1 +1,224 @@
-<p>catalogo-de-produtos works!</p>
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-2 p-0 navbar-shrink" id="mainNavSocial">
+        <div class="container px-4 px-lg-5">
+            <div class="tel-phone">
+                <img src="../../../assets/img/tel.svg" class="mr-2" />
+                <span class="ddd ml-2">62</span>
+                <span class="phone ml-2">3256-3230</span>
+            </div>
+            <img src="../../../assets/img/divider.svg" class="divider-y" />
+            <a class="nav-link-social" href="#about">
+                <img src="../../../assets/img/FB.svg" class="mr-2" />
+            </a>
+            <a class="nav-link-social" href="#about">
+                <img src="../../../assets/img/IG.svg" class="mr-2" />
+            </a>
+            <a class="nav-link-social" class="mr-4" href="#about">
+                <img src="../../../assets/img/IN.svg" />
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-2 navbar-shrink" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">
+                <img class="logo-header" src="../../../assets/img/logo.png" />
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="a-empresa">A EMPRESA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo-de-produtos">CATÁLOGO DE PRODUTOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trabalheconosco">TRABALHE CONOSCO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato">CONTATO</a></li>
+                    <li class="nav-item"><a class="nav-link menu-busca" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            BUSCA
+                            <img class="menu-search" src="../../../assets/img/search.svg" />
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead produtos" id="header-produtos">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-left">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold">ÚLTIMOS<br /> LANÇAMENTOS
+                    </h1>
+                </div>
+                <img src="../../../assets/img/header-produtos.jpeg" class="img-header" />
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white mb-5">veja o que há de inovador no mercado.</p>
+                </div>
+            </div>
+            <div class="icon-btn-zap" data-bs-toggle="modal" data-bs-target="#orcamentoModal">
+                <img src="../../../assets/img/btn-zap.svg" />
+            </div>
+        </div>
+    </header>
+    <section class="page-section produtos" id="catalogo-produtos">
+        <div class="container px-5 px-lg-5">
+            <div class="row mb-3">
+                <div class="col-12 text-left d-flex cumbre p-0">
+                    <h3 class="">HOME</h3>
+                    <h3 class="margin-left">></h3>
+                    <h3 class="margin-left active">CATÁLOGO DE PRODUTOS</h3>
+                </div>
+            </div>
+            <div class="row mb-5 section-2">
+                <div class="col-12 d-flex p-0">
+                    <div class="lista-produtos">
+                        <span>LINHA PRODUTOS</span>
+                        <img src="../../../assets/img/icon-list.svg" />
+                    </div>
+                    <div class="lista-filtros d-flex align-items-center">
+                        <select class="form-control" id="montadora" placeholder="Montadora" name="select">
+                            <option value="" selected>Montadora</option>
+                        </select>
+                        <select class="form-control" id="modelo" placeholder="Modelo" name="select">
+                            <option value="" selected>Modelo</option>
+                        </select>
+                        <input class="form-control" id="codigo" type="text" placeholder="Código" />
+                        <button class="btn btn-primary pesquisa-produto" onclick="pesquisar()">Pesquisar</button>
+                        <div class="label-vercomo">Ver como</div>
+                        <select class="form-control border-0" style="width: 80px;" name="select" onchange="mudaVisualizacao(this)">
+                            <option value="1" selected>Lista</option>
+                            <option value="2">Tabela</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5 section-5 d-none" id="zoom-view">
+                <div class="col-12 description">
+                    <h3></h3>
+                    <label class="montadora"></label>
+                    <label class="modelo"></label>
+                    <label class="codigo"></label>
+                    <img src="../../../assets/img/close-icon-red.svg" class="close-zoom-produto" alt="Close modal" onclick="closeZoomProduto()">
+                </div>
+                <div class="col-12 produto-detalhe">
+                    <div class="images">
+                        <div class="img-zoom">
+                            <img class="" src="assets/no-image.png" />
+                        </div>
+                        <div class="img-images">
+                            <!-- <div class="img-item">
+                                <img src="assets/prod.png" />
+                            </div>
+                            <div class="img-item">
+                                <img src="assets/prod.png" />
+                            </div>
+                            <div class="img-item">
+                                <img src="assets/prod.png" />
+                            </div>
+                            <div class="img-item">
+                                <img src="assets/prod.png" />
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="detalhe">
+                        <div class="titulo">
+                            Descrição
+                        </div>
+                        <div class="titulo-divider">
+                            <img src="../../../assets/img/separador.svg" />
+                        </div>
+                        <div class="descricao">
+
+                        </div>
+                        <div class="detalhes">
+
+                        </div>
+                        <div class="orcamento">
+                            <img src="../../../assets/img/orcamento.svg" data-bs-toggle="modal" data-bs-target="#orcamentoModal" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3 section-3" id="lista-view">
+                <div class="col-md-3 col-12">
+                    <div class="description">
+                        <h3>NOSSOS PRODUTOS</h3>
+                        <p class="">Temos soluções para todas as demandas, nossos produtos automotivos contemplam as mais diversas marcas, linhas e modelos disponíveis no mercado, das menores às maiores peças.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-9 col-12 p-0 container-produtos">
+                    <div class="row produtos">
+                        <!-- <div class="col-md-4 col-12 item-produto">
+                            <img class="img-item" src="assets/lancamentos/prod.svg" />
+                            <div class="desc">
+                                <span class="cod">Cód. 305432</span>
+                                <span class="title">Turbocompressor APL</span>
+                                <span class="sub">Vivamus ut sapien id neque vestibulum sagittis porttitor sed urna</span>
+                                <a class="btn btn-primary" href="#about">+ Detalhes</a>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="row carregar-mais pt-5">
+                        <div class="col-12">
+                            <label onclick="loadMore()">Ver mais</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3 mt-5 section-3 d-none" id="tabela-view">
+                <div class="col-12">
+                    <div class="description">
+                        <h3>NOSSOS PRODUTOS</h3>
+                        <p class="">Temos soluções para todas as demandas, nossos produtos automotivos contemplam as mais diversas marcas, linhas e modelos disponíveis no mercado, das menores às maiores peças.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <table id="produtos-dataTable" class="display" style="width:100%">
+                    </table>
+                </div>
+            </div>
+            <div class="row mb-3 mt-5 section-4-title">
+                <div class="col-12 text-left">
+                    <h3>PRODUTOS RELACIONADOS</h3>
+                </div>
+            </div>
+            <div class="produtos-relacionados section-4">
+                <!-- <div class="item-produto">
+                    <img class="img-item" src="assets/lancamentos/prod.svg" />
+                    <div class="desc">
+                        <span class="cod">Cód. 305432</span>
+                        <span class="title">Turbocompressor APL</span>
+                        <span class="sub">Vivamus ut sapien id neque vestibulum sagittis porttitor sed urna</span>
+                        <a class="btn btn-primary" href="#about">+ Detalhes</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section class="page-section" id="marcas">
+        <div class="container px-4 py-5 px-lg-5 pt-4">
+            <div class="gx-4 gx-lg-5 container-itens">
+                <div class="text-center align-items-center d-flex justify-content-center marca-item">
+                    <img src="../../../assets/img/BRASMECK.png" />
+                </div>
+                <div class="text-center align-items-center d-flex justify-content-center marca-item">
+                    <img src="../../../assets/img/ERBS.png" />
+                </div>
+                <div class="text-center align-items-center d-flex justify-content-center marca-item">
+                    <img src="../../../assets/img/PROGERAL.jpg" />
+                </div>
+                <div class="text-center align-items-center d-flex justify-content-center marca-item">
+                    <img src="../../../assets/img/SIEGER.jpg" />
+                </div>
+                <div class="text-center align-items-center d-flex justify-content-center marca-item">
+                    <img src="../../../assets/img/VENKI.png" />
+                </div>
+                <div class="text-center align-items-center d-flex justify-content-center marca-item">
+                    <img src="../../../assets/img/WISA.png" />
+                </div>
+                <div class="text-center align-items-center d-flex justify-content-center marca-item">
+                    <img src="../../../assets/img/ZM.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</body>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="813.01" height="613.99" viewBox="0 0 813.01 613.99">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="vectorMask" width="770.17" height="532.12" transform="translate(706.58 263.42)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="imagem" transform="translate(-684.99 -222.02)">
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="813.01" height="613.99" transform="translate(684.99 222.02)" fill="#262d2f"/>
+    <g id="Mask_by_Rectangle_3" data-name="Mask by Rectangle 3" clip-path="url(#clip-path)">
+      <g id="Mask_by_Rectangle_3-2" data-name="Mask by Rectangle 3">
+        <g id="picture">
+          <path id="Shape" d="M1150.286,585.53H1033.768a11.684,11.684,0,0,1-11.651-11.652V485.327a11.684,11.684,0,0,1,11.651-11.651h116.516a11.689,11.689,0,0,1,11.653,11.651v88.551a11.687,11.687,0,0,1-11.651,11.652ZM1033.768,483a2.359,2.359,0,0,0-2.33,2.328v88.553a2.357,2.357,0,0,0,2.33,2.329h116.516a2.356,2.356,0,0,0,2.329-2.329V485.325a2.357,2.357,0,0,0-2.327-2.328Z" fill="#171b1d"/>
+          <path id="Path" d="M1054.742,520.281a13.922,13.922,0,1,0-9.9-4.078A13.483,13.483,0,0,0,1054.742,520.281Z" fill="#171b1d"/>
+          <path id="Path-2" data-name="Path" d="M1075.714,541.253l-11.652-11.65-23.3,23.3v13.983h102.535V534.263L1113,503.969Z" fill="#171b1d"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
