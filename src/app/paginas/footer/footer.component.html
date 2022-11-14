@@ -7,16 +7,16 @@
               </div>
               <h3 class="h4 mb-4 text-white">NAVEGAR</h3>
               <p>
-                  <a class="text-white" href="produtos.html">Catálogo de Produtos</a>
+                  <a class="text-white" routerLink="/produtos">Catálogo de Produtos</a>
               </p>
               <p>
-                  <a class="text-white" href="empresa.html">A Empresa</a>
+                  <a class="text-white" routerLink="/a-empresa">A Empresa</a>
               </p>
               <p>
-                  <a class="text-white" href="produtos.html">Últimos Lançamentos</a>
+                  <a class="text-white" routerLink="/produtos">Últimos Lançamentos</a>
               </p>
               <p>
-                  <a class="text-white" href="contato.html">SAC</a>
+                  <a class="text-white" routerLink="/contato">SAC</a>
               </p>
           </div>
           <div class="col-lg-3 col-md-6 text-left section-2">
@@ -92,11 +92,8 @@
                   </p>
               </div>
           </div>
-          <div class="col-lg-4 col-md-6 text-left section-3">
-              <a href="https://www.google.com.br/maps/place/ASA+MULTIPEÇAS/@-16.6950428,-49.3326879,17.72z/data=!4m5!3m4!1s0x935ef744732098eb:0x5dfe50b1cbb2aa43!8m2!3d-16.6943816!4d-49.3306586" class="bt-url" valuetype="" idbt="5485" target="_blank"><img src="https://asamultipecas.com.br/assets/location.jpeg" class="mr-2" /></a>
-              <a class="btn btn-primary mt-4" style="color: #003663; background-color: white !important; border-color: white;" data-bs-toggle="modal" data-bs-target="#modalCatalogo">
-                  <img style="width: 21px; " src="https://asamultipecas.com.br/assets/catalogo.svg" /> SOLICITAR CATÁLOGO IMPRESSO
-              </a>
+          <div class="col-lg-4 col-md-6 text-left section-3" style="margin-top: -10rem !important;">
+            <app-mapa></app-mapa>
           </div>
       </div>
   </div>
