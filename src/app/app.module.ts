@@ -18,6 +18,7 @@ import { ModalComponent } from './components/modal/modal.component';
 import { SacComponent } from './paginas/sac/sac.component';
 import { UltimosLancamentosComponent } from './paginas/ultimos-lancamentos/ultimos-lancamentos.component';
 import { MapaComponent } from './components/mapa/mapa.component';
+import { MapaGeralComponent } from './components/mapa-geral/mapa-geral.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MapaComponent } from './components/mapa/mapa.component';
     ModalComponent,
     SacComponent,
     UltimosLancamentosComponent,
-    MapaComponent
+    MapaComponent,
+    MapaGeralComponent
   ],
   imports: [
     BrowserModule,

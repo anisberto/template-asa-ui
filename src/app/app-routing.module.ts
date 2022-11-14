@@ -1,3 +1,4 @@
+import { MapaGeralComponent } from './components/mapa-geral/mapa-geral.component';
 import { TrabalheConoscoComponent } from './paginas/trabalhe-conosco/trabalhe-conosco.component';
 import { ContatoComponent } from './paginas/contato/contato.component';
 import { HomeComponent } from './paginas/home/home.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'a-empresa', component: AEmpresaComponent},
   {path:'ultimos-lancamentos', component: UltimosLancamentosComponent},
   {path:'sac', component: ContatoComponent},
-  {path:'mapa', component: MapaComponent}
+  {path:'mapa', component: MapaComponent},
+  {path:'mapa-geral', component: MapaGeralComponent}
 ];
 
 @NgModule({
