@@ -3,7 +3,7 @@ import { ContatoComponent } from './paginas/contato/contato.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CatalogoDeProdutosComponent } from './paginas/catalogo-de-produtos/catalogo-de-produtos.component';
+import { CatalogoDeProdutosComponent } from './paginas/catalogo-de-Produtos/catalogo-de-produtos.component';
 import { AEmpresaComponent } from './paginas/a-empresa/a-empresa.component';
 import { UltimosLancamentosComponent } from './paginas/ultimos-lancamentos/ultimos-lancamentos.component';
 import { SacComponent } from './paginas/sac/sac.component';

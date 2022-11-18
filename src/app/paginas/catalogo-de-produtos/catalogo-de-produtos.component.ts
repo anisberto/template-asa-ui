@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CatalogoDeProdutos } from 'src/app/models/catalogoDeProdutos';
+import { CatalogoServiceService } from 'src/app/services/catalogoService.service';
 
 @Component({
   selector: 'app-catalogo-de-produtos',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogoDeProdutosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private catalogoService: CatalogoServiceService) { }
 
   ngOnInit(): void {
+    this.getAllCatalogos()
   }
+  
+  catalogoDeProdutos: CatalogoDeProdutos = new CatalogoDeProdutos()
 
+  getAllCatalogos() {
+    this.catalogoService.findAll().subscribe(resposta => this.catalogoDeProdutos);
+  }
 }

@@ -10,15 +10,15 @@
                         </p>
                         <form id="contatoFormulario">
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Informe seu nome..." />
+                                <input [ngModelOptions]="{standalone: true}" [(ngModel)]="contato.name" class="form-control" id="name" type="text" placeholder="Informe seu nome..." />
                                 <label for="name">Nome</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" />
+                                <input [ngModelOptions]="{standalone: true}" [(ngModel)]="contato.email" class="form-control" id="email" type="email" placeholder="name@example.com" />
                                 <label for="email">Email</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) XXXX-XXXX" />
+                                <input [ngModelOptions]="{standalone: true}" [(ngModel)]="contato.phone" class="form-control" id="phone" type="tel" placeholder="(123) XXXX-XXXX" />
                                 <label for="phone">Telefone</label>
                             </div>
                             <div class="d-flex flex-row" style="justify-content: space-between;">
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Descreva de forma resumida sua mensagem..." style="height: 10rem"></textarea>
+                                <textarea [ngModelOptions]="{standalone: true}" [(ngModel)]="contato.description" class="form-control" id="message" type="text" placeholder="Descreva de forma resumida sua mensagem..." style="height: 10rem"></textarea>
                                 <label for="message">Message</label>
                             </div>
                         </form>
@@ -76,7 +76,7 @@
                                     de <a href="#">Política de Privacidade.</a></span>
                             </div>
                             <div class="d-grid">
-                                <button class="btn btn-primary" onclick="sendContact()">Enviar</button>
+                                <button class="btn btn-primary" (click)="enviarDados()">Enviar</button>
                             </div>
                         </div>
                     </div>
@@ -118,9 +118,6 @@
                     <div class="">
                         <img class="logo-footer" style="width: 120px !important;" src="assets/img/logo-2.png" />
                     </div>
-                    <a class="btn btn-primary" style="color: #003663;" data-bs-toggle="modal" data-bs-target="#modalCatalogo">
-                        <img style="width: 21px;" src="https://asamultipecas.com.br/assets/catalogo.svg" /> SOLICITAR CATÁLOGO IMPRESSO
-                    </a>
                 </div>
                 <div class="col-lg-7 col-md-6 text-left section-2">
                     <h3 class="h4 mb-0 text-white">NAVEGAR</h3>
@@ -152,7 +149,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="close-modal" data-bs-dismiss="modal">
-                    <img src="assets/close-icon.svg" alt="Close modal" />
+                    <img src="https://asamultipecas.com.br/assets/close-icon.svg" alt="Close modal" />
                 </div>
                 <div class="modal-body p-0">
                     <div class="col-12">

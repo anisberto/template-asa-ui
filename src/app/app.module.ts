@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './paginas/header/header.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { FooterComponent } from './paginas/footer/footer.component';
 import { AEmpresaComponent } from './paginas/a-empresa/a-empresa.component';
-import { CatalogoDeProdutosComponent } from './paginas/catalogo-de-produtos/catalogo-de-produtos.component';
+import { CatalogoDeProdutosComponent } from './paginas/catalogo-de-Produtos/catalogo-de-produtos.component';
 import { TrabalheConoscoComponent } from './paginas/trabalhe-conosco/trabalhe-conosco.component';
 import { ContatoComponent } from './paginas/contato/contato.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -18,6 +17,8 @@ import { ModalComponent } from './components/modal/modal.component';
 import { SacComponent } from './paginas/sac/sac.component';
 import { UltimosLancamentosComponent } from './paginas/ultimos-lancamentos/ultimos-lancamentos.component';
 import { MapaComponent } from './components/mapa/mapa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { MapaComponent } from './components/mapa/mapa.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

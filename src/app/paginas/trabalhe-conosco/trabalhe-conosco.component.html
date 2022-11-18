@@ -49,15 +49,15 @@
                       </p>
                       <form id="workForm">
                           <div class="form-floating mb-3">
-                              <input class="form-control" id="name" type="text" placeholder="Informe seu nome..." />
+                              <input [ngModelOptions]="{standalone: true}" [(ngModel)]="trabalheConosco.name" class="form-control" id="name" type="text" placeholder="Informe seu nome..." />
                               <label for="name">Nome</label>
                           </div>
                           <div class="form-floating mb-3">
-                              <input class="form-control" id="email" type="email" placeholder="name@example.com" />
+                              <input [ngModelOptions]="{standalone: true}" [(ngModel)]="trabalheConosco.email" class="form-control" id="email" type="email" placeholder="name@example.com" />
                               <label for="email">Email</label>
                           </div>
                           <div class="form-floating mb-3">
-                              <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" />
+                              <input [ngModelOptions]="{standalone: true}" [(ngModel)]="trabalheConosco.phone" class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" />
                               <label for="phone">Telefone</label>
                           </div>
                           <div class="form-floating mb-3">
@@ -66,11 +66,11 @@
                               <label for="area">Área de interesse</label>
                           </div>
                           <div class="form-floating mb-3">
-                              <input class="form-control" type="file" id="file" accept="application/pdf" />
+                              <input [ngModelOptions]="{standalone: true}" [(ngModel)]="trabalheConosco.file" class="form-control" type="file" id="file" accept="application/pdf" />
                               <label for="file" style="margin-top: -7px;">Anexar curriculum</label>
                           </div>
                           <div class="form-floating mb-3">
-                              <textarea class="form-control" id="message" type="text" placeholder="Nos mande uma mensagem..." style="height: 6rem;max-height:6rem;"></textarea>
+                              <textarea [ngModelOptions]="{standalone: true}" [(ngModel)]="trabalheConosco.message" class="form-control" id="message" type="text" placeholder="Nos mande uma mensagem..." style="height: 6rem;max-height:6rem;"></textarea>
                               <label for="message">Message</label>
                           </div>
                       </form>
@@ -82,7 +82,7 @@
                                   de <a href="#">Política de Privacidade.</a></span>
                           </div>
                           <div class="d-grid">
-                              <button class="btn btn-primary" onclick="sendContactWork()">Enviar</button>
+                              <button class="btn btn-primary" (click)="enviarDados()">Enviar</button>
                           </div>
                       </div>
                   </div>
@@ -124,9 +124,6 @@
                   <div class="">
                       <img class="logo-footer" style="width: 120px !important;" src="https://asamultipecas.com.br/assets/img/logo-2.png" />
                   </div>
-                  <a class="btn btn-primary" style="color: #003663;" data-bs-toggle="modal" data-bs-target="#modalCatalogo">
-                      <img style="width: 21px;" src="https://asamultipecas.com.br/assets/catalogo.svg" /> SOLICITAR CATÁLOGO IMPRESSO
-                  </a>
               </div>
               <div class="col-lg-7 col-md-6 text-left section-2">
                   <h3 class="h4 mb-0 text-white">NAVEGAR</h3>
