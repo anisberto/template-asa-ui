@@ -12,6 +12,6 @@ export class ContatoService {
   constructor(private http: HttpClient) { }
 
   createContato(contatoComponent: Contato): Observable<Contato> {
-    return this.http.post<Contato>(`${environment.API_URL}/api.asamultipecas.com.br/request-contact/store`, contatoComponent);
+    return this.http.post<Contato>(`${environment.API_URL}/request-contact/store`, contatoComponent);
   }
 }

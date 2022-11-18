@@ -5,17 +5,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './paginas/header/header.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { FooterComponent } from './paginas/footer/footer.component';
-import { AEmpresaComponent } from './paginas/a-empresa/a-empresa.component';
-import { CatalogoDeProdutosComponent } from './paginas/catalogo-de-Produtos/catalogo-de-produtos.component';
-import { TrabalheConoscoComponent } from './paginas/trabalhe-conosco/trabalhe-conosco.component';
+import { EmpresaComponent } from './paginas/empresa/empresa.component';
+import { ProdutosComponent } from './paginas/produtos/produtos.component';
+import { TrabalheConoscoComponent } from './paginas/trabalheConosco/trabalheConosco.component';
 import { ContatoComponent } from './paginas/contato/contato.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { TabelaComponent } from './components/tabela/tabela.component';
 import { GraficoComponent } from './components/grafico/grafico.component';
 import { ModalComponent } from './components/modal/modal.component';
-import { SacComponent } from './paginas/sac/sac.component';
-import { UltimosLancamentosComponent } from './paginas/ultimos-lancamentos/ultimos-lancamentos.component';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms'
@@ -26,8 +24,8 @@ import { FormsModule} from '@angular/forms'
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    AEmpresaComponent,
-    CatalogoDeProdutosComponent,
+    EmpresaComponent,
+    ProdutosComponent,
     TrabalheConoscoComponent,
     ContatoComponent,
     CarouselComponent,
@@ -35,8 +33,6 @@ import { FormsModule} from '@angular/forms'
     TabelaComponent,
     GraficoComponent,
     ModalComponent,
-    SacComponent,
-    UltimosLancamentosComponent,
     MapaComponent
   ],
   imports: [

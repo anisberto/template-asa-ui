@@ -12,6 +12,6 @@ export class TrabalheConoscoService {
   constructor(private http: HttpClient) { }
 
   createContato(trabalheConoscoComponent: TrabalheConosco): Observable<TrabalheConosco> {
-    return this.http.post<TrabalheConosco>(`${environment.API_URL}/job-position`, trabalheConoscoComponent);
+    return this.http.post<TrabalheConosco>(`${environment.API_URL}/work-with-us/store`, trabalheConoscoComponent);
   }
 }

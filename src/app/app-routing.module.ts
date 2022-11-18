@@ -1,24 +1,22 @@
-import { TrabalheConoscoComponent } from './paginas/trabalhe-conosco/trabalhe-conosco.component';
+import { TrabalheConoscoComponent } from './paginas/trabalheConosco/trabalheConosco.component';
 import { ContatoComponent } from './paginas/contato/contato.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CatalogoDeProdutosComponent } from './paginas/catalogo-de-Produtos/catalogo-de-produtos.component';
-import { AEmpresaComponent } from './paginas/a-empresa/a-empresa.component';
-import { UltimosLancamentosComponent } from './paginas/ultimos-lancamentos/ultimos-lancamentos.component';
-import { SacComponent } from './paginas/sac/sac.component';
+import { ProdutosComponent } from './paginas/produtos/produtos.component';
+import { EmpresaComponent } from './paginas/empresa/empresa.component';
 import { MapaComponent } from './components/mapa/mapa.component';
+import { MapaGeralComponent } from './components/mapa-geral/mapa-geral.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch:'full'},
   {path:'home', component: HomeComponent},
   {path:'trabalheconosco', component: TrabalheConoscoComponent},
   {path:'contato', component: ContatoComponent},
-  {path:'catalogo-de-produtos', component: CatalogoDeProdutosComponent},
-  {path:'a-empresa', component: AEmpresaComponent},
-  {path:'ultimos-lancamentos', component: UltimosLancamentosComponent},
-  {path:'sac', component: ContatoComponent},
-  {path:'mapa', component: MapaComponent}
+  {path:'produtos', component: ProdutosComponent},
+  {path:'empresa', component: EmpresaComponent},
+  {path:'mapa', component: MapaComponent},
+  {path:'mapa-geral', component: MapaGeralComponent}
 ];
 
 @NgModule({

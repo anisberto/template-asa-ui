@@ -1,4 +1,4 @@
-export class CatalogoDeProdutos {
+export class Produto {
 
     id!: any;
     name: any;

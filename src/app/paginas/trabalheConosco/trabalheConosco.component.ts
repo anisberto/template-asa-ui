@@ -4,9 +4,9 @@ import { TrabalheConoscoService } from 'src/app/services/trabalheConosco.service
 import swal from 'sweetalert';
 
 @Component({
-  selector: 'app-trabalhe-conosco',
-  templateUrl: './trabalhe-conosco.component.html',
-  styleUrls: ['./trabalhe-conosco.component.css']
+  selector: 'app-trabalheConosco',
+  templateUrl: './trabalheConosco.component.html',
+  styleUrls: ['./trabalheConosco.component.css']
 })
 export class TrabalheConoscoComponent implements OnInit {
 
