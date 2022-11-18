@@ -9,15 +9,14 @@ import { CatalogoService } from 'src/app/services/catalogo.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private catalogoServiceHome: CatalogoService) { }
+  catalogo: any[] = [];
+  constructor(private catalogoService: CatalogoService) { }
 
   ngOnInit(): void {
     this.getAllCatalogos()
   }
-  
-  catalogo: Catalogo = new Catalogo()
 
   getAllCatalogos() {
-    this.catalogoServiceHome.findAll().subscribe(resposta => this.catalogo);
+    this.catalogoService.findAll().subscribe(catalogoService => this.catalogo = catalogoService);
   }
 }

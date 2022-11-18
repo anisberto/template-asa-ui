@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CatalogoService } from 'src/app/services/catalogo.service';
 import { ProdutosService } from 'src/app/services/produtos.service';
 
 @Component({
@@ -12,10 +13,11 @@ export class ProdutosComponent implements OnInit {
   constructor(private produtoService: ProdutosService) { }
 
   ngOnInit(): void {
-    this.getAllCatalogos()
+    this.getAllProdutos()
   }
 
-  getAllCatalogos() {
+  getAllProdutos() {
     this.produtoService.findAll().subscribe(produtoService => this.produto = produtoService);
   }
+
 }
