@@ -68,7 +68,8 @@
                                 <label for="phone">Telefone</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <select class="form-control" id="area" placeholder="Área" name="select">
+                                <select class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="trabalheConosco.job_position_id" placeholder="Área" name="select">
+                                <option [attr.selected]="areaInteresse.name" *ngFor="let areaInteresse of listaTrablheConosco.list" [value]="areaInteresse.name">{{areaInteresse.name}}</option>
                                 </select>
                                 <label for="area">Área de interesse</label>
                             </div>

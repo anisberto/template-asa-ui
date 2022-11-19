@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TrabalheConosco } from 'src/app/models/trabalheConosco';
+import { ListaTrablheConosco, TrabalheConosco } from 'src/app/models/trabalheConosco';
 import { TrabalheConoscoService } from 'src/app/services/trabalheConosco.service';
 import swal from 'sweetalert';
 
@@ -13,9 +13,16 @@ export class TrabalheConoscoComponent implements OnInit {
   constructor(private trabalheConoscoService: TrabalheConoscoService) { }
 
   ngOnInit(): void {
+    this.getTrabalheConosco()
   }
-
+  listaTrablheConosco: ListaTrablheConosco = new ListaTrablheConosco()
   trabalheConosco: TrabalheConosco = new TrabalheConosco()
+
+  getTrabalheConosco() {
+    this.trabalheConoscoService.findAll().subscribe((result)=> {
+      this.listaTrablheConosco = result
+    }); 
+  }
 
   enviarDados(): void {
 

@@ -9,7 +9,7 @@ import { CatalogoService } from 'src/app/services/catalogo.service';
 })
 export class HomeComponent implements OnInit {
 
-  catalogo: any[] = [];
+  catalogos: any[] = [];
   constructor(private catalogoService: CatalogoService) { }
 
   ngOnInit(): void {
@@ -17,6 +17,6 @@ export class HomeComponent implements OnInit {
   }
 
   getAllCatalogos() {
-    this.catalogoService.findAll().subscribe(catalogoService => this.catalogo = catalogoService);
+    this.catalogoService.findAll().subscribe(catalogoService => this.catalogos = catalogoService);
   }
 }

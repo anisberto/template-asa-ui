@@ -32,49 +32,14 @@
         <h3 class="h4">CATÁLOGOS</h3>
       </div>
     </div>
-    <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="col-md-auto" style="margin-right: -2%;">
-          <div class="card" style="width: 12rem;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 col-2" style="margin: 0px 30px 20px 30px !important;" *ngFor="let catalogos of catalogos">
+          <div class="card" style="width: 14rem !important; height: 27rem !important;">
             <img class="card-img-top" src="../../../assets/img/capa-catalogo-automotivo.jpg" alt="Card image cap">
             <div class="card-body">
-              <a href="https://asamultipecas.sfo3.digitaloceanspaces.com/catalogs/2d763b73-429a-4744-bdb0-65eaf283563b.pdf"
-                class="btn btn-danger" target="_blank" style="width: 100%;">Download</a>
-            </div>
-          </div>   
-        </div>
-        <div class="col-md-auto" style="margin-right: -2%;">
-          <div class="card" style="width: 12rem;">
-            <img class="card-img-top" src="../../../assets/img/capa-catalogo-automotivo.jpg" alt="Card image cap">
-            <div class="card-body">
-              <a href="https://asamultipecas.sfo3.digitaloceanspaces.com/catalogs/2d763b73-429a-4744-bdb0-65eaf283563b.pdf"
-                class="btn btn-danger" target="_blank" style="width: 100%;">Download</a>
-            </div>
-          </div>   
-        </div>
-        <div class="col-md-auto" style="margin-right: -2%;">
-          <div class="card" style="width: 12rem;">
-            <img class="card-img-top" src="../../../assets/img/capa-catalogo-automotivo.jpg" alt="Card image cap">
-            <div class="card-body">
-              <a href="https://asamultipecas.sfo3.digitaloceanspaces.com/catalogs/2d763b73-429a-4744-bdb0-65eaf283563b.pdf"
-                class="btn btn-danger" target="_blank" style="width: 100%;">Download</a>
-            </div>
-          </div>   
-        </div>
-        <div class="col-md-auto" style="margin-right: -2%;">
-          <div class="card" style="width: 12rem;">
-            <img class="card-img-top" src="../../../assets/img/capa-catalogo-automotivo.jpg" alt="Card image cap">
-            <div class="card-body">
-              <a href="https://asamultipecas.sfo3.digitaloceanspaces.com/catalogs/2d763b73-429a-4744-bdb0-65eaf283563b.pdf"
-                class="btn btn-danger" target="_blank" style="width: 100%;">Download</a>
-            </div>
-          </div>   
-        </div>
-        <div class="col-md-auto" style="margin-right: -2%;">
-          <div class="card" style="width: 12rem;">
-            <img class="card-img-top" src="../../../assets/img/capa-catalogo-automotivo.jpg" alt="Card image cap">
-            <div class="card-body">
-              <a href="https://asamultipecas.sfo3.digitaloceanspaces.com/catalogs/2d763b73-429a-4744-bdb0-65eaf283563b.pdf"
+              <p><small>{{catalogos.description}}</small></p>
+              <a href="{{catalogos.file}}"
                 class="btn btn-danger" target="_blank" style="width: 100%;">Download</a>
             </div>
           </div>   
