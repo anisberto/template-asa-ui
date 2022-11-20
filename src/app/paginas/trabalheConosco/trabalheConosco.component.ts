@@ -48,4 +48,17 @@ export class TrabalheConoscoComponent implements OnInit {
       swal({title:"Currículo enviado com sucesso!", icon:"success"});
     }
   }
+
+  inputFileChange(event: any) {
+    let fileList: FileList = event.target.files;
+    if(fileList.length > 0) {
+        let file: File = fileList[0];
+        let formData:FormData = new FormData();
+        formData.append('uploadFile', file, file.name);
+        let filedoc = document.querySelector<any>("#workForm #file").files
+        this.trabalheConosco.file = filedoc[0]
+    }
+    console.log(this.inputFileChange)
+  }
+
 }

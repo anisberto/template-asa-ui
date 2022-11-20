@@ -69,13 +69,12 @@
                             </div>
                             <div class="form-floating mb-3">
                                 <select class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="trabalheConosco.job_position_id" placeholder="Área" name="select">
-                                <option [attr.selected]="areaInteresse.name" *ngFor="let areaInteresse of listaTrablheConosco.list" [value]="areaInteresse.name">{{areaInteresse.name}}</option>
+                                <option [attr.selected]="areaInteresse.id" *ngFor="let areaInteresse of listaTrablheConosco.list" [value]="areaInteresse.id">{{areaInteresse.name}}</option>
                                 </select>
                                 <label for="area">Área de interesse</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input [ngModelOptions]="{standalone: true}" [(ngModel)]="trabalheConosco.file"
-                                    class="form-control" type="file" id="file" accept="application/pdf" />
+                                <input class="form-control" (change)="inputFileChange($event)" type="file" id="file" accept="application/pdf"/>
                                 <label for="file" style="margin-top: -7px;">Anexar curriculum</label>
                             </div>
                             <div class="form-floating mb-3">
