@@ -41,10 +41,10 @@ export class TrabalheConoscoComponent implements OnInit {
       } else if (this.trabalheConosco.message == '' || this.trabalheConosco.message == null) {
 
         swal({title:"Insira a menssagem!", icon:"error"});
-        
+
       } else {
-      this.trabalheConoscoService.createContato(this.trabalheConosco).subscribe((resposta) => {
-      });
+      this.trabalheConoscoService.createContato(this.trabalheConosco).subscribe(trabalheConoscoService => 
+        this.trabalheConosco = trabalheConoscoService);
       swal({title:"Currículo enviado com sucesso!", icon:"success"});
     }
   }
@@ -56,9 +56,7 @@ export class TrabalheConoscoComponent implements OnInit {
         let formData:FormData = new FormData();
         formData.append('uploadFile', file, file.name);
         let filedoc = document.querySelector<any>("#workForm #file").files
-        this.trabalheConosco.file = filedoc[0]
+        this.trabalheConosco.file = filedoc[0];
     }
-    console.log(this.inputFileChange)
   }
-
 }

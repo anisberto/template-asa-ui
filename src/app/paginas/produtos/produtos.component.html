@@ -76,10 +76,10 @@
                     </div>
                     <div class="lista-filtros d-flex align-items-center">
                         <select class="form-control" id="montadora" placeholder="Montadora" name="select">
-                            <option value="" selected>Montadora</option>
+                            <option value="" *ngFor="let montadora of montadoras" selected>{{montadora.name}}</option>
                         </select>
                         <select class="form-control" id="modelo" placeholder="Modelo" name="select">
-                            <option value="" selected>Modelo</option>
+                            <option value="" *ngFor="let modelo of modelos" selected>{{modelo.name}}</option>
                         </select>
                         <input class="form-control" id="codigo" type="text" placeholder="Código" />
                         <button class="btn btn-primary pesquisa-produto" onclick="pesquisar()">Pesquisar</button>
@@ -104,7 +104,7 @@
                 <div class="col-12 produto-detalhe">
                     <div class="images">
                         <div class="img-zoom">
-                            <img class="" src="assets/no-image.png" />
+                            <img class="" src="assets/no-image.png"/>
                         </div>
                         <div class="img-images">
                             <!-- <div class="img-item">
@@ -152,19 +152,14 @@
                 </div>
                 <div class="col-md-9 col-12 p-0 container-produtos">
                     <div class="row produtos">
-                        <!-- <div class="col-md-4 col-12 item-produto">
-                            <img class="img-item" src="assets/lancamentos/prod.svg" />
+                         <div class="col-md-4 col-12 item-produto" *ngFor="let produto of listaProdutos">
+                            <img class="img-item" src="{{produto.image}}" />
                             <div class="desc">
-                                <span class="cod">Cód. 305432</span>
-                                <span class="title">Turbocompressor APL</span>
-                                <span class="sub">Vivamus ut sapien id neque vestibulum sagittis porttitor sed urna</span>
+                                <span class="cod">{{produto.code}}</span>
+                                <span class="title">{{produto.name}}</span>
+                                <span class="sub">{{produto.description}}</span>
                                 <a class="btn btn-primary" href="#about">+ Detalhes</a>
                             </div>
-                        </div> -->
-                    </div>
-                    <div class="row carregar-mais pt-5">
-                        <div class="col-12">
-                            <label onclick="loadMore()">Ver mais</label>
                         </div>
                     </div>
                 </div>

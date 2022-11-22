@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListaModelos, ListaMontadoras, Produto } from 'src/app/models/Produto';
+import { Modelo, Montatora, Produto } from 'src/app/models/Produto';
 import { ProdutosService } from 'src/app/services/produtos.service';
 
 @Component({
@@ -11,30 +11,31 @@ export class ProdutosComponent implements OnInit {
 
   
   constructor(private produtoService: ProdutosService) { }
-  listaMontadoras: ListaMontadoras = new ListaMontadoras();
-  listaModelos: ListaModelos = new ListaModelos();
-  produtos: Produto = new Produto()
+  listaProdutos: Produto[] = [];
+  montadoras: Montatora[] = [];
+  modelos: Modelo[] = [];
+
   ngOnInit(): void {
-    this.createMontadoras()
-    this.createModelos()
-    this.createProdutos()
+    this.getProdutos()
+    this.getMontadoras()
+    this.getModelos()
   }
 
-  createProdutos(): void {
-    this.produtoService.createProdutos(this.produtos).subscribe((resposta)=> {
-      
-    })
-  }
-
-  createMontadoras(): void {
-    this.produtoService.createMontadoras(this.listaMontadoras).subscribe((produtoService)=> {
-      this.listaMontadoras = produtoService
+  getProdutos(): void {
+    this.produtoService.getProdutos(1).subscribe((result) => {
+      this.listaProdutos = result.list
     });
   }
 
-  createModelos(): void {
-    this.produtoService.createModelos(this.listaModelos).subscribe((resposta)=> {
-      
-    })
+  getMontadoras(): void {
+    this.produtoService.getMontadoras(1).subscribe((result)=> {
+      this.montadoras = result.list
+    });
+  }
+
+  getModelos(): void {
+    this.produtoService.getModelos(1).subscribe((result)=> {
+      this.modelos = result.list
+    });
   }
 }

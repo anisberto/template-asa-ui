@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ListaModelos, ListaMontadoras, Produto } from '../models/Produto';
+import { ListaProdutos, ObjetoModelo, ObjetoMontadora } from '../models/Produto';
 
 @Injectable({
   providedIn: 'root'
@@ -11,16 +11,16 @@ export class ProdutosService {
 
   constructor(private http: HttpClient) { }
 
-  createProdutos(produtos: Produto): Observable<Produto> {
-    return this.http.post<Produto>(`${environment.API_URL}/product/p-index`, produtos);
+  getProdutos(pagina: number): Observable<ListaProdutos> {
+    return this.http.post<ListaProdutos>(`${environment.API_URL}/product/p-index`, {"page": pagina});
   }
 
-  createMontadoras(montadoras: ListaMontadoras): Observable<ListaMontadoras> {
-    return this.http.post<ListaMontadoras>(`${environment.API_URL}/automaker/p-index`, montadoras);
+  getMontadoras(pagina: number): Observable<ObjetoMontadora> {
+    return this.http.post<ObjetoMontadora>(`${environment.API_URL}/automaker/p-index`, {"page": pagina});
   }
 
-  createModelos(modelos: ListaModelos): Observable<ListaModelos> {
-    return this.http.post<ListaModelos>(`${environment.API_URL}/model/p-index`, modelos);
+  getModelos(pagina: number): Observable<ObjetoModelo> {
+    return this.http.post<ObjetoModelo>(`${environment.API_URL}/model/p-index`, {"page": pagina});
   }
 }
 

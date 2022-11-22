@@ -19,29 +19,29 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms'
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    FooterComponent,
-    EmpresaComponent,
-    ProdutosComponent,
-    TrabalheConoscoComponent,
-    ContatoComponent,
-    CarouselComponent,
-    FormularioComponent,
-    TabelaComponent,
-    GraficoComponent,
-    ModalComponent,
-    MapaComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        HomeComponent,
+        FooterComponent,
+        EmpresaComponent,
+        ProdutosComponent,
+        TrabalheConoscoComponent,
+        ContatoComponent,
+        CarouselComponent,
+        FormularioComponent,
+        TabelaComponent,
+        GraficoComponent,
+        ModalComponent,
+        MapaComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+    ]
 })
 export class AppModule { }
