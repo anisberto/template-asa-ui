@@ -183,16 +183,16 @@
                     <h3>PRODUTOS RELACIONADOS</h3>
                 </div>
             </div>
-            <div class="produtos-relacionados section-4">
-                <!-- <div class="item-produto">
+            <div class="col-md-9 col-12 p-0 section-4">
+                 <div class="item-produto" *ngFor="let produto of listaProdutos">
                     <img class="img-item" src="assets/lancamentos/prod.svg" />
                     <div class="desc">
-                        <span class="cod">Cód. 305432</span>
-                        <span class="title">Turbocompressor APL</span>
-                        <span class="sub">Vivamus ut sapien id neque vestibulum sagittis porttitor sed urna</span>
+                        <span class="cod">{{produto.image}}</span>
+                        <span class="title">{{produto.name}}</span>
+                        <span class="sub">{{produto.description}}</span>
                         <a class="btn btn-primary" href="#about">+ Detalhes</a>
                     </div>
-                </div> -->
+                </div> 
             </div>
         </div>
     </section>
